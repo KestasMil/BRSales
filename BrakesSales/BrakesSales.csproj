@@ -1,0 +1,283 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{43B592E9-807B-4EC5-8925-7EEEABD84974}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BrakesSales</RootNamespace>
+    <AssemblyName>BrakesSales</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.8.10.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.8.10\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Mail, Version=3.0.18307.847, Culture=neutral, PublicKeyToken=6dc438ab78a525b3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\C# .NET Standard\YahooMailRead\YahooMailRead\libs\net45\Mail.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Scripts\tablesorter-master\dist\css\dragtable.mod.min.css" />
+    <Content Include="Scripts\tablesorter-master\dist\css\filter.formatter.min.css" />
+    <Content Include="Scripts\tablesorter-master\dist\css\highlights.min.css" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\black-asc.gif" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\black-desc.gif" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\black-unsorted.gif" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\bootstrap-black-unsorted.png" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\bootstrap-white-unsorted.png" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\dragtable-handle.png" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\dragtable-handle.svg" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\dropbox-asc-hovered.png" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\dropbox-asc.png" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\dropbox-desc-hovered.png" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\dropbox-desc.png" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\first.png" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\green-asc.gif" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\green-desc.gif" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\green-header.gif" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\green-unsorted.gif" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\ice-asc.gif" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\ice-desc.gif" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\ice-unsorted.gif" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\last.png" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\loading.gif" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\metro-black-asc.png" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\metro-black-desc.png" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\metro-loading.gif" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\metro-unsorted.png" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\metro-white-asc.png" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\metro-white-desc.png" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\next.png" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\prev.png" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\white-asc.gif" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\white-desc.gif" />
+    <Content Include="Scripts\tablesorter-master\dist\css\images\white-unsorted.gif" />
+    <Content Include="Scripts\tablesorter-master\dist\css\jquery.tablesorter.pager.min.css" />
+    <Content Include="Scripts\tablesorter-master\dist\css\theme.blackice.min.css" />
+    <Content Include="Scripts\tablesorter-master\dist\css\theme.blue.css" />
+    <Content Include="Scripts\tablesorter-master\dist\css\theme.blue.min.css" />
+    <Content Include="Scripts\tablesorter-master\dist\css\theme.bootstrap.min.css" />
+    <Content Include="Scripts\tablesorter-master\dist\css\theme.bootstrap_2.min.css" />
+    <Content Include="Scripts\tablesorter-master\dist\css\theme.bootstrap_3.min.css" />
+    <Content Include="Scripts\tablesorter-master\dist\css\theme.bootstrap_4.min.css" />
+    <Content Include="Scripts\tablesorter-master\dist\css\theme.dark.min.css" />
+    <Content Include="Scripts\tablesorter-master\dist\css\theme.default.min.css" />
+    <Content Include="Scripts\tablesorter-master\dist\css\theme.dropbox.min.css" />
+    <Content Include="Scripts\tablesorter-master\dist\css\theme.green.min.css" />
+    <Content Include="Scripts\tablesorter-master\dist\css\theme.grey.min.css" />
+    <Content Include="Scripts\tablesorter-master\dist\css\theme.ice.min.css" />
+    <Content Include="Scripts\tablesorter-master\dist\css\theme.jui.min.css" />
+    <Content Include="Scripts\tablesorter-master\dist\css\theme.materialize.min.css" />
+    <Content Include="Scripts\tablesorter-master\dist\css\theme.metro-dark.min.css" />
+    <Content Include="Scripts\tablesorter-master\dist\css\widget.grouping.min.css" />
+    <Content Include="Scripts\tablesorter-master\dist\js\extras\jquery.dragtable.mod.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\extras\jquery.metadata.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\extras\jquery.tablesorter.pager.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\extras\semver-mod.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\jquery.tablesorter.combined.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\jquery.tablesorter.combined.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\jquery.tablesorter.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\jquery.tablesorter.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\jquery.tablesorter.widgets.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\jquery.tablesorter.widgets.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\parsers\parser-date-extract.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\parsers\parser-date-iso8601.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\parsers\parser-date-month.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\parsers\parser-date-range.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\parsers\parser-date-two-digit-year.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\parsers\parser-date-weekday.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\parsers\parser-date.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\parsers\parser-duration.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\parsers\parser-feet-inch-fraction.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\parsers\parser-file-type.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\parsers\parser-globalize.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\parsers\parser-huge-numbers.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\parsers\parser-ignore-articles.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\parsers\parser-image.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\parsers\parser-input-select.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\parsers\parser-leading-zeros.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\parsers\parser-metric.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\parsers\parser-named-numbers.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\parsers\parser-network.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\parsers\parser-roman.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-alignChar.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-build-table.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-chart.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-columns.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-columnSelector.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-cssStickyHeaders.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-currentSort.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-editable.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-filter-formatter-html5.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-filter-formatter-jui.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-filter-formatter-select2.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-filter-type-insideRange.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-filter.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-formatter.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-grouping.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-headerTitles.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-lazyload.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-mark.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-math.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-output.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-pager.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-print.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-reflow.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-repeatheaders.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-resizable.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-saveSort.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-scroller.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-sort2Hash.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-sortTbodies.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-staticRow.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-stickyHeaders.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-storage.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-toggle.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-uitheme.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-vertical-group.min.js" />
+    <Content Include="Scripts\tablesorter-master\dist\js\widgets\widget-view.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmailData.cs" />
+    <Compile Include="MailParser.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <Content Include="Scripts\tablesorter-master\dist\css\less\bootstrap.less" />
+    <Content Include="Scripts\tablesorter-master\dist\css\less\metro.less" />
+    <Content Include="Scripts\tablesorter-master\dist\css\less\theme.less" />
+    <Content Include="Scripts\tablesorter-master\dist\css\scss\theme.scss" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56425</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56425/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
